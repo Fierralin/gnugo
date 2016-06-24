@@ -3259,6 +3259,17 @@ stones_on_board(int color)
 	  (color & WHITE ? white_stones : 0));
 }
 
+int print_board_status() {
+  int tmpi, tmpj;
+  for (tmpi = 0; tmpi < 19; tmpi++) {
+    for (tmpj = 0; tmpj < 19; tmpj++) {
+      fprintf(stderr, "%u|", board[tmpi * 20 + tmpj]);
+    }
+    fprintf(stderr, "\n");
+  }
+  fprintf(stderr, "-------------------------\n");
+}
+
 
 /* ===================== Statistics  ============================= */
 

@@ -277,6 +277,7 @@ int get_last_move(void);
 int get_last_player(void);
 int get_last_opponent_move(int color);
 int stones_on_board(int color);
+int print_board_status();
 
 /* Functions handling the variable board state. */
 int trymove(int pos, int color, const char *message, int str);

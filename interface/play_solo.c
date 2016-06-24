@@ -314,6 +314,14 @@ load_and_score_sgf_file(SGFTree *tree, Gameinfo *gameinfo,
   sgffile_output(score_tree);
 }
 
+void load_and_score_sgf_file_newnew() {
+  float score;
+  reset_engine();
+  silent_examine_position(4);
+  score = ((white_score + black_score) / 2.0);
+  fprintf(stderr, "white: %f, black: %f, final: %f\n", white_score, black_score, score);
+}
+
 
 /*
  * Local Variables:
